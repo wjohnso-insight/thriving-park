@@ -23,10 +23,11 @@ function Litter(){
 export default function App(props: Props) : React.Node {
     return (
         <Router>
-            <Link to="/">About</Link>
-            <Link to="/move">Move</Link>
-            <Link to="/litter">Litter</Link>
-
+            <nav>
+                <Link to="/">About</Link>
+                <Link to="/move">Move</Link>
+                <Link to="/litter">Litter</Link>
+            </nav>
             <Switch>
                 <Route exact path="/" component={About}/>
                 <Route path="/move" component={Move} />
