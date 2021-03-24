@@ -3,8 +3,10 @@
 //TODO: [√] scaffold out slice with dummy data
 //TODO: [] wire slice to `<Feed>` component
 //TODO: [] define async thunk to retrieve `feedPosts` from server
-//TODO: [] define reducers for CRUD operations (Add, Update)
-//TODO: [] define reusable selectors
+//TODO: [] define `feedPostUpdated` action (dependant on `Session` slice)
+//TODO: [] define `feedPostDeleted` action (dependant on `Session` slice )
+//TODO: [] define `selectFeed` global selector
+//TODO: [] defined `selectUserPosts` global selector (dependant on `Session` slice)
 //TODO: [] write middleware to dispatch updates to server
 //@flow 
 
