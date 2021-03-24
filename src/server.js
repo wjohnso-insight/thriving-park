@@ -1,6 +1,6 @@
 //TODO: [√] Define `feedPost` Model
 //TODO: [√] Initialize `feedPost` seeds
-//TODO: [] Get `feedPosts` from `<About>` 
+//TODO: [√] Get `feedPosts` from `<About>` 
 
 import {
     createServer,
