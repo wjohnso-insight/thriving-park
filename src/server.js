@@ -1,6 +1,7 @@
 //TODO: [√] Define `feedPost` Model
 //TODO: [√] Initialize `feedPost` seeds
 //TODO: [√] Get `feedPosts` from `<About>` 
+//TODO: [] define `/activeUser` enpoint
 
 import {
     createServer,
@@ -26,7 +27,9 @@ export default function server(){
         routes(){
             this.namespace = "/api";
             this.timing = 400;
+
             this.get('/feedPosts', (schema) => schema.feedPosts.all())
+            this.get('/activeUser', () => 1)
         },
     })
 }

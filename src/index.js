@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import store from './app/store';
 import { Provider } from 'react-redux';
+import { getActiveUser } from './features/session/sessionSlice'
 
 import './index.scss'
 import server from './server'
 
-server()
+server() //* Creates fake rest api
 
-store.dispatch({type: 'feed/feedPostAdded', payload: {userId: 1, body: "This is post #3"}})
+store.dispatch(getActiveUser)  //* Async thunk hydrates application
+store.dispatch({type: 'feed/feedPostAdded', payload: {userId: 1, body: "This is post #3"}}) //! Remove from prod
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
