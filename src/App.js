@@ -1,58 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+//@flow
+import * as React from 'react'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+import About from './components/about/About'
+type Props = {
+
 }
 
-export default App;
+function Move(){
+    return <span>Move 1</span>
+}
+
+function Litter(){
+    return <span>Litter 1</span>
+}
+
+export default function App(props: Props) : React.Node {
+    return (
+        <Router>
+            <Link to="/">About</Link>
+            <Link to="/move">Move</Link>
+            <Link to="/litter">Litter</Link>
+
+            <Switch>
+                <Route exact path="/" component={About}/>
+                <Route path="/move" component={Move} />
+                <Route path="/litter">
+                    <Litter />
+                </Route>
+            </Switch>
+        </Router>
+    )
+}
+
