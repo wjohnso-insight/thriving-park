@@ -4,13 +4,12 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom"
 
+import Header from './components/display/header/Header'
 import About from './components/about/About'
-import TriconBadge from './components/display/TriconBadge'
 
-import './App.scoped.scss'
+// import TriconBadge from './components/display/TriconBadge'
 type Props = {
 
 }
@@ -26,29 +25,7 @@ function Litter(){
 export default function App(props: Props) : React.Node {
     return (
         <Router id="layout-router">
-            <header className="layout">
-                <aside className="logo">
-                    <section>
-                       <h1> Driving Park</h1>
-                       <h2> Always on the move</h2>
-                    </section>
-                    <TriconBadge />  
-                </aside>
-                <nav>
-                    <section className="links">
-                        <div className="nav-item">
-                            <Link to="/">ABOUT</Link>
-                        </div>  
-                        <div className="nav-item">
-                            <Link to="/move">MOVE</Link>
-                        </div>
-                        <div className="nav-item">
-                            <Link to="/litter">LITTER</Link>
-                        </div>
-                    </section>
-                </nav>
-            </header>
-            <main>
+            <Header />
                 <Switch>
                     <Route exact path="/" component={About}/>
                     <Route path="/move" component={Move} />
@@ -56,7 +33,6 @@ export default function App(props: Props) : React.Node {
                         <Litter />
                     </Route>
                 </Switch>
-            </main>
         </Router>
     )
 }

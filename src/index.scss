@@ -1,0 +1,50 @@
+@import "./style/globals.scss";
+
+html,
+#root{
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    line-height: 1.5;
+    font-size: 18px; 
+
+    background-color: black;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+a:active{
+    color: $accent-color;
+}
+
+h1,
+h2,
+h3,
+h4{
+   text-transform: uppercase; 
+   letter-spacing: $sign-spacing;
+   margin: 0;
+   padding: 0; 
+}
+
+
+
