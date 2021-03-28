@@ -30,3 +30,5 @@ export async function getActiveUser(dispatch, getState){
     const response = await axios.get('/api/activeUser')
     dispatch({type: 'session/activeUserInitialized', payload: response.data})
 }
+
+export const selectActiveUser = (state) => state?.activeUserId;

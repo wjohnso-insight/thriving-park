@@ -1,3 +1,5 @@
+//TODO: [] write unit test to make sure that `dispatch(getActiveUser)` is only called once
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
