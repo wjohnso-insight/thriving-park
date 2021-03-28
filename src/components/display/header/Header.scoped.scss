@@ -1,0 +1,29 @@
+@import "../../../style/globals.scss";
+
+#header-wrapper{
+    background-color: lightpink;
+    display: flex;
+    height: 20%;
+
+    section{
+        background-color: lightgreen;
+        display: flex;
+        flex-direction: column;
+        padding: $section-padding;
+
+        h1{
+            font-size: 2rem;
+        }
+    }
+
+    nav{
+        background-color: lightblue;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: $section-padding;
+
+    }
+}
+
