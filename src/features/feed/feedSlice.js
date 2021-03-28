@@ -52,4 +52,3 @@ export default function feedReducer(state : State = initialState, action: Object
     }
 }
 
-

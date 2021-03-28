@@ -1,0 +1,27 @@
+.layout{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'one one'
+    'two three';
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .25rem;
+}
+
+#icon-one{
+    grid-area: one;
+}
+
+#icon-two{
+    grid-area: two;
+}
+
+#icon-three{
+    grid-area: three
+}
