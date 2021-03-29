@@ -6,62 +6,112 @@ Object {
   "baseElement": <body>
     <div>
       <section
+        class="mobile"
         id="header-wrapper"
       >
-        <section>
-          <h1>
+        <section
+          class="mobile"
+          id="header-logo"
+        >
+          <h1
+            class="mobile"
+          >
             Driving Park
           </h1>
         </section>
         <nav
+          class="mobile"
           id="header-nav"
         >
-          <a
-            href="/"
+          <section
+            id="linktab-wrapper"
           >
-            ABOUT
-          </a>
-          <a
-            href="/move"
+            <span>
+              <a
+                href="/"
+              >
+                About
+              </a>
+            </span>
+          </section>
+          <section
+            id="linktab-wrapper"
           >
-            MOVE
-          </a>
-          <a
-            href="/litter"
+            <span>
+              <a
+                href="/move"
+              >
+                Move
+              </a>
+            </span>
+          </section>
+          <section
+            id="linktab-wrapper"
           >
-            LITTER
-          </a>
+            <span>
+              <a
+                href="/litter"
+              >
+                Litter
+              </a>
+            </span>
+          </section>
         </nav>
       </section>
     </div>
   </body>,
   "container": <div>
     <section
+      class="mobile"
       id="header-wrapper"
     >
-      <section>
-        <h1>
+      <section
+        class="mobile"
+        id="header-logo"
+      >
+        <h1
+          class="mobile"
+        >
           Driving Park
         </h1>
       </section>
       <nav
+        class="mobile"
         id="header-nav"
       >
-        <a
-          href="/"
+        <section
+          id="linktab-wrapper"
         >
-          ABOUT
-        </a>
-        <a
-          href="/move"
+          <span>
+            <a
+              href="/"
+            >
+              About
+            </a>
+          </span>
+        </section>
+        <section
+          id="linktab-wrapper"
         >
-          MOVE
-        </a>
-        <a
-          href="/litter"
+          <span>
+            <a
+              href="/move"
+            >
+              Move
+            </a>
+          </span>
+        </section>
+        <section
+          id="linktab-wrapper"
         >
-          LITTER
-        </a>
+          <span>
+            <a
+              href="/litter"
+            >
+              Litter
+            </a>
+          </span>
+        </section>
       </nav>
     </section>
   </div>,

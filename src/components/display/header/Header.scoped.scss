@@ -1,29 +1,53 @@
 @import "../../../style/globals.scss";
 
-#header-wrapper{
-    background-color: lightpink;
-    display: flex;
-    height: 20%;
 
+#header-wrapper.mobile{
+    flex-direction: column;
+}
+
+#header-wrapper{
+    background-color: $main-color;
+    height: 20%;
+    display: flex;
+    
     section{
-        background-color: lightgreen;
+        // background-color: lightgreen;
+        
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
         padding: $section-padding;
 
-        h1{
+        h1,
+        h1.desktop{
             font-size: 2rem;
+            text-align: center;
         }
+
+        h1.mobile{ 
+            font-size: 2rem;
+            text-align: center;
+        }
+
     }
 
     nav{
-        background-color: lightblue;
+        //background-color: lightblue;
         display: flex;
         flex-grow: 1;
-        justify-content: flex-end;
+        justify-content: space-around;
         align-items: flex-end;
-        padding: $section-padding;
-
     }
+
+    nav.mobile{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#header-logo.mobile{
+    padding: none;
 }
 
