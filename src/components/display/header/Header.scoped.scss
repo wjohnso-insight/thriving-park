@@ -34,12 +34,11 @@
     }
 
     nav{
-        // background-color: lightblue;
+        //background-color: lightblue;
         display: flex;
         flex-grow: 1;
-        justify-content: flex-end;
+        justify-content: space-around;
         align-items: flex-end;
-        padding: $section-padding;
     }
 
     nav.mobile{

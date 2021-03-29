@@ -23,21 +23,39 @@ Object {
           class="mobile"
           id="header-nav"
         >
-          <a
-            href="/"
+          <section
+            id="linktab-wrapper"
           >
-            ABOUT
-          </a>
-          <a
-            href="/move"
+            <span>
+              <a
+                href="/"
+              >
+                About
+              </a>
+            </span>
+          </section>
+          <section
+            id="linktab-wrapper"
           >
-            MOVE
-          </a>
-          <a
-            href="/litter"
+            <span>
+              <a
+                href="/move"
+              >
+                Move
+              </a>
+            </span>
+          </section>
+          <section
+            id="linktab-wrapper"
           >
-            LITTER
-          </a>
+            <span>
+              <a
+                href="/litter"
+              >
+                Litter
+              </a>
+            </span>
+          </section>
         </nav>
       </section>
     </div>
@@ -61,21 +79,39 @@ Object {
         class="mobile"
         id="header-nav"
       >
-        <a
-          href="/"
+        <section
+          id="linktab-wrapper"
         >
-          ABOUT
-        </a>
-        <a
-          href="/move"
+          <span>
+            <a
+              href="/"
+            >
+              About
+            </a>
+          </span>
+        </section>
+        <section
+          id="linktab-wrapper"
         >
-          MOVE
-        </a>
-        <a
-          href="/litter"
+          <span>
+            <a
+              href="/move"
+            >
+              Move
+            </a>
+          </span>
+        </section>
+        <section
+          id="linktab-wrapper"
         >
-          LITTER
-        </a>
+          <span>
+            <a
+              href="/litter"
+            >
+              Litter
+            </a>
+          </span>
+        </section>
       </nav>
     </section>
   </div>,
