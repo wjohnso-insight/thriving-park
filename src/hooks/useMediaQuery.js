@@ -1,41 +1,34 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import { useState, useEffect } from 'react';
-import isClient from './utils/isClient';
-import isAPISupported from './utils/isAPISupported';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState} from 'react'
 
-const errorMessage = 'matchMedia is not supported, this could happen both because window.matchMedia is not supported by'
-  + ' your current browser or you\'re using the useMediaQuery hook whilst server side rendering.';
+export default function useMediaQuery(queries, values, defaultValue) {
+  // Array containing a media query list for each query
+  const mediaQueryLists = queries.map(q => window.matchMedia(q));
 
-/**
- * Accepts a media query string then uses the
- * [window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) API to determine if it
- * matches with the current document.<br />
- * It also monitor the document changes to detect when it matches or stops matching the media query.<br />
- * Returns the validity state of the given media query.
- *
- */
-const useMediaQuery = (mediaQuery) => {
-  if (!isClient || !isAPISupported('matchMedia')) {
-    // eslint-disable-next-line no-console
-    console.warn(errorMessage);
-    return null;
-  }
+  // Function that gets value based on matching media query
+  const getValue = () => {
+    // Get index of first media query that matches
+    const index = mediaQueryLists.findIndex(mql => mql.matches);
+    // Return related value or defaultValue if none
+    return typeof values[index] !== 'undefined' ? values[index] : defaultValue;
+  };
 
-  const [isVerified, setIsVerified] = useState(!!window.matchMedia(mediaQuery).matches);
+  // State and setter for matched value
+  const [value, setValue] = useState(getValue);
 
-  useEffect(() => {
-    const mediaQueryList = window.matchMedia(mediaQuery);
-    const documentChangeHandler = () => setIsVerified(!!mediaQueryList.matches);
+  useEffect(
+    () => {
+      // Event listener callback
+      // Note: By defining getValue outside of useEffect we ensure that it has ...
+      // ... current values of hook args (as this hook callback is created once on mount).
+      const handler = () => setValue(getValue);
+      // Set a listener for each media query with above handler as callback.
+      mediaQueryLists.forEach(mql => mql.addListener(handler));
+      // Remove listeners on cleanup
+      return () => mediaQueryLists.forEach(mql => mql.removeListener(handler));
+    },
+    [] // Empty array ensures effect is only run on mount and unmount
+  );
 
-    mediaQueryList.addListener(documentChangeHandler);
-
-    documentChangeHandler();
-    return () => {
-      mediaQueryList.removeListener(documentChangeHandler);
-    };
-  }, [mediaQuery]);
-
-  return isVerified;
-};
-
-export default useMediaQuery;
+  return value;
+}
