@@ -3,6 +3,14 @@ import Header from './Header'
 import { render } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 
+window.matchMedia = window.matchMedia || function() {
+    return {
+        matches: false,
+        addListener: function() {},
+        removeListener: function() {}
+    };
+};
+
 it('renders the component', () =>{
     const container = render(
         <BrowserRouter>
@@ -13,7 +21,7 @@ it('renders the component', () =>{
     expect(container).toMatchSnapshot()    
 })
 
-it('renders Driving Park test', () =>{
+it('renders Driving Park', () =>{
     const { getByText } = render(
         <BrowserRouter>
             <Header />
