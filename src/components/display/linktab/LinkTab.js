@@ -17,7 +17,6 @@ import './LinkTab.scoped.scss'
 
 type Props = {
     children?: React.Node,
-    path: string
 }
 
 export default function LinkTab(props: Props) : React.Node {
