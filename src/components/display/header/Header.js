@@ -65,6 +65,7 @@ export default function Header(props: Props) : React.Node {
                 <h1 className={`${viewport}`}>
                     Driving Park
                 </h1>
+                <h4>Always on the move</h4>
             </section>
             <nav className={`${viewport}`} id="header-nav">
                 {RenderedLinkTabs()}

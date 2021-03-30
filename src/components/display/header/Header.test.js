@@ -1,8 +1,7 @@
 import React from 'react'
 import Header from './Header'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
-import { StateMock } from '@react-mock/state'
 
 window.matchMedia = window.matchMedia || function() {
     return {
