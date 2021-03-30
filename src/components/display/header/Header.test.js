@@ -30,3 +30,13 @@ it('renders Driving Park', () =>{
     expect(getByText("Driving Park")).toBeInTheDocument();
 })
 
+it('renders the active link differently', () =>{
+    
+    const { getByText } = render(
+        <BrowserRouter>
+            <Header />
+        </BrowserRouter>
+    )
+    expect(getByText('about')).toHaveAttribute('class', 'active')
+})
+

@@ -18,41 +18,50 @@ Object {
           >
             Driving Park
           </h1>
+          <h4>
+            Always on the move
+          </h4>
         </section>
         <nav
           class="mobile"
           id="header-nav"
         >
           <section
+            class="mobile"
             id="linktab-wrapper"
           >
             <span>
               <a
+                class="active"
                 href="/"
               >
-                About
+                about
               </a>
             </span>
           </section>
           <section
+            class="mobile"
             id="linktab-wrapper"
           >
             <span>
               <a
+                class=""
                 href="/move"
               >
-                Move
+                move
               </a>
             </span>
           </section>
           <section
+            class="mobile"
             id="linktab-wrapper"
           >
             <span>
               <a
+                class=""
                 href="/litter"
               >
-                Litter
+                litter
               </a>
             </span>
           </section>
@@ -74,41 +83,50 @@ Object {
         >
           Driving Park
         </h1>
+        <h4>
+          Always on the move
+        </h4>
       </section>
       <nav
         class="mobile"
         id="header-nav"
       >
         <section
+          class="mobile"
           id="linktab-wrapper"
         >
           <span>
             <a
+              class="active"
               href="/"
             >
-              About
+              about
             </a>
           </span>
         </section>
         <section
+          class="mobile"
           id="linktab-wrapper"
         >
           <span>
             <a
+              class=""
               href="/move"
             >
-              Move
+              move
             </a>
           </span>
         </section>
         <section
+          class="mobile"
           id="linktab-wrapper"
         >
           <span>
             <a
+              class=""
               href="/litter"
             >
-              Litter
+              litter
             </a>
           </span>
         </section>
