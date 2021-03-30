@@ -2,6 +2,7 @@
     "javascript.validate.enable": false,
     "typescript.validate.enable": false,
     "cSpell.words": [
+        "Navoption",
         "Tricon",
         "fortawesome",
         "navoptions"
