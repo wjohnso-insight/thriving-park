@@ -16,11 +16,20 @@ Object {
           <div
             id="texts-wrapper"
           >
-            <h1
-              class="mobile"
+            <div
+              id="graflogo-wrapper"
             >
-              Driving Park
-            </h1>
+              <h1
+                id="sign"
+              >
+                Driving Park
+              </h1>
+              <span
+                id="graf"
+              >
+                THRIVING
+              </span>
+            </div>
             <h4
               class="mobile"
             >
@@ -156,11 +165,20 @@ Object {
         <div
           id="texts-wrapper"
         >
-          <h1
-            class="mobile"
+          <div
+            id="graflogo-wrapper"
           >
-            Driving Park
-          </h1>
+            <h1
+              id="sign"
+            >
+              Driving Park
+            </h1>
+            <span
+              id="graf"
+            >
+              THRIVING
+            </span>
+          </div>
           <h4
             class="mobile"
           >
