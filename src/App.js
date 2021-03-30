@@ -24,7 +24,7 @@ function Litter(){
 
 export default function App(props: Props) : React.Node {
     return (
-        <Router id="layout-router">
+        <Router id="layout-router" data-testid="router">
             <Header />
                 <Switch>
                     <Route exact path="/" component={About}/>
