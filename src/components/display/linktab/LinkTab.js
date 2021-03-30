@@ -9,9 +9,11 @@
  */
 //@flow
 import * as React from 'react'
+
 import './LinkTab.scoped.scss'
 type Props = {
-    children?: React.Node
+    children?: React.Node,
+    path: string
 }
 
 export default function LinkTab(props: Props) : React.Node {
