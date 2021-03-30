@@ -23,17 +23,15 @@ body{
     width: 100%;
 }
 
-a,
+a{
+    color: white;
+}
+
 a:link,
 a:visited,
 a:focus,
 a:hover{
-    color: white;
     text-decoration: none;
-}
-
-a:active{
-    color: $accent-color;
 }
 
 h1,
