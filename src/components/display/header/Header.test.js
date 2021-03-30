@@ -1,7 +1,8 @@
 import React from 'react'
 import Header from './Header'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
+import { StateMock } from '@react-mock/state'
 
 window.matchMedia = window.matchMedia || function() {
     return {
@@ -28,5 +29,15 @@ it('renders Driving Park', () =>{
         </BrowserRouter>
     )
     expect(getByText("Driving Park")).toBeInTheDocument();
+})
+
+it('renders the active link differently', () =>{
+    
+    const { getByText } = render(
+        <BrowserRouter>
+            <Header />
+        </BrowserRouter>
+    )
+    expect(getByText('about')).toHaveAttribute('class', 'active')
 })
 

@@ -1,10 +1,14 @@
 //@flow
 import * as React from 'react'
 import useMediaQuery from '../../../hooks/useMediaQuery'
-import { Link } from "react-router-dom"
+
+import { Link, useLocation } from 'react-router-dom'
+import cx from 'classnames'
+
 import "./Header.scoped.scss"
 
 import breakpoints from '../../../utils/breakpoints'
+import { Navoption, navoptions } from '../../../utils/navoptions'
 
 import LinkTab from '../linktab/LinkTab'
 
@@ -15,6 +19,12 @@ type Props = {
 export default function Header(props: Props) : React.Node {
     
     let { desktop, laptop, tablet, mobile } = breakpoints;
+    const { pathname } = useLocation();
+    const [ activePath, setActivePath ] = React.useState('/');
+
+    React.useEffect(() => {
+        setActivePath(pathname)
+    },[pathname])
 
     const viewport = useMediaQuery(
         [
@@ -26,6 +36,28 @@ export default function Header(props: Props) : React.Node {
         ['desktop','laptop','tablet','mobile'],
         'mobile'
     )
+
+    const RenderedLinkTabs = () => (
+        navoptions.map((navoption : Navoption) => {
+            const { path, markdownVal } = navoption;
+            const isActive = (path === activePath ? true : false);
+
+            const linkClasses = cx({
+                active : isActive
+            })
+
+            return(
+                <LinkTab key={markdownVal}>
+                    <Link 
+                        className={linkClasses}
+                        to={`${path}`}
+                        >
+                        {markdownVal}
+                    </Link>
+                </LinkTab>
+            )              
+        })
+    )
     
     return (
         <section className={`${viewport}`} id="header-wrapper">
@@ -35,15 +67,7 @@ export default function Header(props: Props) : React.Node {
                 </h1>
             </section>
             <nav className={`${viewport}`} id="header-nav">
-                <LinkTab>
-                    <Link to="/">About</Link>
-                </LinkTab>
-                <LinkTab>
-                    <Link to="/move">Move</Link>
-                </LinkTab>
-                <LinkTab>
-                    <Link to="/litter">Litter</Link>
-                </LinkTab>
+                {RenderedLinkTabs()}
             </nav>
         </section>
     )

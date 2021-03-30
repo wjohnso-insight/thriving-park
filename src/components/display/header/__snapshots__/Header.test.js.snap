@@ -28,9 +28,10 @@ Object {
           >
             <span>
               <a
+                class="active"
                 href="/"
               >
-                About
+                about
               </a>
             </span>
           </section>
@@ -39,9 +40,10 @@ Object {
           >
             <span>
               <a
+                class=""
                 href="/move"
               >
-                Move
+                move
               </a>
             </span>
           </section>
@@ -50,9 +52,10 @@ Object {
           >
             <span>
               <a
+                class=""
                 href="/litter"
               >
-                Litter
+                litter
               </a>
             </span>
           </section>
@@ -84,9 +87,10 @@ Object {
         >
           <span>
             <a
+              class="active"
               href="/"
             >
-              About
+              about
             </a>
           </span>
         </section>
@@ -95,9 +99,10 @@ Object {
         >
           <span>
             <a
+              class=""
               href="/move"
             >
-              Move
+              move
             </a>
           </span>
         </section>
@@ -106,9 +111,10 @@ Object {
         >
           <span>
             <a
+              class=""
               href="/litter"
             >
-              Litter
+              litter
             </a>
           </span>
         </section>
