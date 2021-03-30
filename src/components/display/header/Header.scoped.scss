@@ -2,54 +2,59 @@
 
 
 #header-wrapper.mobile{
-    flex-direction: column;
+    display: block;
 }
 
-#header-wrapper{
+section#header-wrapper{
     background-color: $main-color;
-    height: 20%;
     display: flex;
     width: 100%;
     
-    section{
+    section#header-logo{
         // background-color: lightgreen;
-        
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-
         padding: $section-padding;
 
-        h1,
-        h1.desktop{
-            font-size: 2rem;
-            text-align: center;
+        #texts-wrapper{
+            h1,
+            h1.desktop{
+                font-size: 2rem;
+                text-align: center;
+            }
+    
+            h1.mobile{ 
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            h4.mobile{
+                text-align: center;
+            }
         }
 
-        h1.mobile{ 
-            font-size: 2rem;
-            text-align: center;
+        #icon-wrapper.mobile{
+            display: none;
         }
-
     }
 
-    nav{
-        //background-color: lightblue;
+    #header-nav{
         display: flex;
         flex-grow: 1;
         justify-content: space-around;
         align-items: flex-end;
     }
 
-    nav.mobile{
-        justify-content: center;
-        align-items: center;
+    #header-nav.mobile{
+        margin-bottom: .25rem;
     }
 }
 
 #header-logo.mobile{
-    padding: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 a.active{

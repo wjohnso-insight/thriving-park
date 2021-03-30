@@ -11,6 +11,7 @@ import breakpoints from '../../../utils/breakpoints'
 import { Navoption, navoptions } from '../../../utils/navoptions'
 
 import LinkTab from '../linktab/LinkTab'
+import TriconBadge from '../tricon_badge/TriconBadge'
 
 type Props = {
 
@@ -62,10 +63,15 @@ export default function Header(props: Props) : React.Node {
     return (
         <section className={`${viewport}`} id="header-wrapper">
             <section className={`${viewport}`} id="header-logo">
-                <h1 className={`${viewport}`}>
-                    Driving Park
-                </h1>
-                <h4>Always on the move</h4>
+                <div id="texts-wrapper">
+                    <h1 className={`${viewport}`}>
+                        Driving Park
+                    </h1>
+                    <h4 className={`${viewport}`}>Always on the move</h4>
+                </div>
+                <div className={`${viewport}`} id="icon-wrapper">
+                    <TriconBadge />
+                </div>
             </section>
             <nav className={`${viewport}`} id="header-nav">
                 {RenderedLinkTabs()}
