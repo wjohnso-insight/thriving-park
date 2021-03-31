@@ -9,7 +9,7 @@ import {
 import Header from './components/display/header/Header'
 import About from './components/about/About'
 
-// import TriconBadge from './components/display/TriconBadge'
+import './App.scoped.scss'
 type Props = {
 
 }
@@ -26,13 +26,15 @@ export default function App(props: Props) : React.Node {
     return (
         <Router id="layout-router" data-testid="router">
             <Header />
-                <Switch>
-                    <Route exact path="/" component={About}/>
-                    <Route path="/move" component={Move} />
-                    <Route path="/litter">
-                        <Litter />
-                    </Route>
-                </Switch>
+                <section id="main-content">
+                    <Switch>
+                        <Route exact path="/" component={About}/>
+                        <Route path="/move" component={Move} />
+                        <Route path="/litter">
+                            <Litter />
+                        </Route>
+                    </Switch>
+                </section>
         </Router>
     )
 }
