@@ -6,8 +6,9 @@
             - border radius
             - drop shadow
         [√] Style if active
-        [] Make tab display responsive
- */
+        [√] Make tab display responsive
+        [] Refactor to not look like a tab
+*/
 //@flow
 import * as React from 'react'
 import useViewport from '../../../hooks/useViewport'

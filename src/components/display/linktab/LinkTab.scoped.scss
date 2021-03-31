@@ -2,15 +2,14 @@
 
 #linktab-wrapper{
     background-color: $secondary-color;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 2px 2px rgba(0,0,0,0.5);
+    border: solid thin white;
+    border-radius: 5px;
     flex-grow: 1;
     margin-left: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     height: clamp(25%, 35%, 100%);
-    width: clamp(5%,15%,35%);
     span{
         text-transform: uppercase;
         font-weight: 800;
