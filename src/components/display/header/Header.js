@@ -65,7 +65,7 @@ export default function Header(props: Props) : React.Node {
         <section className={`${viewport}`} id="header-wrapper">
             <section className={`${viewport}`} id="header-logo">
                 <div id="texts-wrapper">
-                    <GrafLogo />
+                    <GrafLogo viewport={viewport} />
                     {/* <h1 className={`${viewport}`}>
                         Driving Park
                     </h1> */}
