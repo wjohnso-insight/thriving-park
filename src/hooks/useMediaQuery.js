@@ -1,7 +1,8 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+//@flow
+/* eslint-disable react-hooks/exhaustive-deps */ 
 import { useEffect, useState} from 'react'
 
-export default function useMediaQuery(queries, values, defaultValue) {
+export default function useMediaQuery(queries : any, values : any, defaultValue : any): string{
   // Array containing a media query list for each query
   const mediaQueryLists = queries.map(q => window.matchMedia(q));
 
