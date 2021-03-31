@@ -12,6 +12,7 @@ import { Navoption, navoptions } from '../../../utils/navoptions'
 
 import LinkTab from '../linktab/LinkTab'
 import TriconBadge from '../tricon_badge/TriconBadge'
+import GrafLogo from '../graflogo/GrafLogo'
 
 type Props = {
 
@@ -64,9 +65,10 @@ export default function Header(props: Props) : React.Node {
         <section className={`${viewport}`} id="header-wrapper">
             <section className={`${viewport}`} id="header-logo">
                 <div id="texts-wrapper">
-                    <h1 className={`${viewport}`}>
+                    <GrafLogo viewport={viewport} />
+                    {/* <h1 className={`${viewport}`}>
                         Driving Park
-                    </h1>
+                    </h1> */}
                     <h4 className={`${viewport}`}>Always on the move</h4>
                 </div>
                 <div className={`${viewport}`} id="icon-wrapper">
