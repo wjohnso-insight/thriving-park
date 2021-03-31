@@ -9,6 +9,8 @@ import {
 import Header from './components/display/header/Header'
 import About from './components/about/About'
 
+import useViewport from '../src/hooks/useViewport';
+
 import './App.scoped.scss'
 type Props = {
 
@@ -23,6 +25,9 @@ function Litter(){
 }
 
 export default function App(props: Props) : React.Node {
+
+    useViewport(true);
+
     return (
         <Router id="layout-router" data-testid="router">
             <Header />
