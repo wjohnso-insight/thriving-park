@@ -1,42 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`describes the GrafLogo component should render the component 1`] = `
+exports[`describes the About component should render the component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        id="graflogo-wrapper"
+        class="content"
+        id="about-wrapper"
       >
-        <h1
-          id="sign"
+        <section
+          class="content-panel"
+          id="community-feed"
         >
-          Driving Park
-        </h1>
-        <span
-          class="undefined"
-          id="graf"
-        >
-          THRIVING
-        </span>
+          <h1
+            class="graf sign"
+            data-testid="feed-header"
+          >
+            Community Feed
+          </h1>
+          <span>
+            Getting posts
+          </span>
+        </section>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      id="graflogo-wrapper"
+      class="content"
+      id="about-wrapper"
     >
-      <h1
-        id="sign"
+      <section
+        class="content-panel"
+        id="community-feed"
       >
-        Driving Park
-      </h1>
-      <span
-        class="undefined"
-        id="graf"
-      >
-        THRIVING
-      </span>
+        <h1
+          class="graf sign"
+          data-testid="feed-header"
+        >
+          Community Feed
+        </h1>
+        <span>
+          Getting posts
+        </span>
+      </section>
     </div>
   </div>,
   "debug": [Function],
