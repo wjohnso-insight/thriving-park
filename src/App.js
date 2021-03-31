@@ -26,7 +26,7 @@ function Litter(){
 
 export default function App(props: Props) : React.Node {
 
-    useViewport(true);
+    useViewport();
 
     return (
         <Router id="layout-router" data-testid="router">

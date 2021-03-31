@@ -14,13 +14,13 @@ import useMediaQuery from './useMediaQuery'
 
 const useViewport = (debug? : boolean) : string =>{
 
-    const [ breakpointNames, breakpointVals ] = Object.entries(breakpoints);
- 
+    const [ values, queries ] = Object.entries(breakpoints);
     const viewport = useMediaQuery(
-        breakpointVals,
-        breakpointNames,
-        'mobile'
+        queries,
+        values,
+        "mobile"
     )
+    // debugger;
 
     useEffect(()  =>{
         if(debug){
@@ -28,7 +28,12 @@ const useViewport = (debug? : boolean) : string =>{
         }
     },[viewport, debug])
     
-    return viewport;
+    if(typeof viewport === 'string'){
+        return viewport 
+    }
+    else{
+        return 'mobile'
+    };
 }
 
 export default useViewport
