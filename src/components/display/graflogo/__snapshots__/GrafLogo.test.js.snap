@@ -14,6 +14,7 @@ Object {
           Driving Park
         </h1>
         <span
+          class="undefined"
           id="graf"
         >
           THRIVING
@@ -31,6 +32,7 @@ Object {
         Driving Park
       </h1>
       <span
+        class="undefined"
         id="graf"
       >
         THRIVING
