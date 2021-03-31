@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` test suite description should render the component 1`] = `
+exports[`describes the GrafLogo component should render the component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
