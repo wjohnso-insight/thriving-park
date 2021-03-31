@@ -25,6 +25,7 @@ Object {
                 Driving Park
               </h1>
               <span
+                class="mobile"
                 id="graf"
               >
                 THRIVING
@@ -174,6 +175,7 @@ Object {
               Driving Park
             </h1>
             <span
+              class="mobile"
               id="graf"
             >
               THRIVING

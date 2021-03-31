@@ -1,13 +1,12 @@
 //@flow
 import * as React from 'react'
-import useMediaQuery from '../../../hooks/useMediaQuery'
+import useViewport from '../../../hooks/useViewport'
 
 import { Link, useLocation } from 'react-router-dom'
 import cx from 'classnames'
 
 import "./Header.scoped.scss"
 
-import breakpoints from '../../../utils/breakpoints'
 import { Navoption, navoptions } from '../../../utils/navoptions'
 
 import LinkTab from '../linktab/LinkTab'
@@ -20,7 +19,6 @@ type Props = {
 
 export default function Header(props: Props) : React.Node {
     
-    let { desktop, laptop, tablet, mobile } = breakpoints;
     const { pathname } = useLocation();
     const [ activePath, setActivePath ] = React.useState('/');
 
@@ -28,16 +26,7 @@ export default function Header(props: Props) : React.Node {
         setActivePath(pathname)
     },[pathname])
 
-    const viewport = useMediaQuery(
-        [
-            desktop,
-            laptop,
-            tablet,
-            mobile
-        ],
-        ['desktop','laptop','tablet','mobile'],
-        'mobile'
-    )
+    const viewport = useViewport();
 
     const RenderedLinkTabs = () => (
         navoptions.map((navoption : Navoption) => {
@@ -66,9 +55,6 @@ export default function Header(props: Props) : React.Node {
             <section className={`${viewport}`} id="header-logo">
                 <div id="texts-wrapper">
                     <GrafLogo viewport={viewport} />
-                    {/* <h1 className={`${viewport}`}>
-                        Driving Park
-                    </h1> */}
                     <h4 className={`${viewport}`}>Always on the move</h4>
                 </div>
                 <div className={`${viewport}`} id="icon-wrapper">
