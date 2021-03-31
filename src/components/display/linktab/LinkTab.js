@@ -10,8 +10,7 @@
  */
 //@flow
 import * as React from 'react'
-import breakpoints from '../../../utils/breakpoints'
-import useMediaQuery from '../../../hooks/useMediaQuery'
+import useViewport from '../../../hooks/useViewport'
 
 import './LinkTab.scoped.scss'
 
@@ -21,18 +20,7 @@ type Props = {
 
 export default function LinkTab(props: Props) : React.Node {
 
-    const { desktop, laptop, tablet, mobile } = breakpoints;
-
-    const viewport = useMediaQuery(
-        [
-            desktop,
-            laptop,
-            tablet,
-            mobile
-        ],
-        ['desktop', 'laptop', 'tablet', 'mobile'],
-        'mobile'
-    )
+    const viewport = useViewport();
     
     return (
         <section className={`${viewport}`} id="linktab-wrapper">

@@ -26,7 +26,7 @@ export default function Header(props: Props) : React.Node {
         setActivePath(pathname)
     },[pathname])
 
-    const viewport = useViewport();
+    const viewport = useViewport() || "";
 
     const RenderedLinkTabs = () => (
         navoptions.map((navoption : Navoption) => {

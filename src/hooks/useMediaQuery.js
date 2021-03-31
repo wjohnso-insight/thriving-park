@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */ 
 import { useEffect, useState} from 'react'
 
-export default function useMediaQuery(queries : any, values : any, defaultValue : any): string{
+export default function useMediaQuery(queries : [string, mixed], values : [string, mixed], defaultValue? : string): mixed{
   // Array containing a media query list for each query
   const mediaQueryLists = queries.map(q => window.matchMedia(q));
 
@@ -30,6 +30,5 @@ export default function useMediaQuery(queries : any, values : any, defaultValue 
     },
     [] // Empty array ensures effect is only run on mount and unmount
   );
-
   return value;
 }
