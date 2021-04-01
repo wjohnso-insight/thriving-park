@@ -8,21 +8,21 @@ type Props = {
 
 }
 
-export default function About(props: Props) : React.Node {
+const About  = (props: Props) : React.Node => {
     
     const { useState, useEffect } = React;
-    const [ feedPosts, setFeedPosts] = useState()
+    const [ feedPosts, setFeedPosts ] = useState();
 
-    useEffect(() => {
+    useEffect(() =>{
         axios.get('api/feedPosts')
-        .then((res) => setFeedPosts(res.data.feedPosts))
-        .catch((err) => console.error(err))
+            .then((res) => setFeedPosts(res.data.feedPosts))
+            .catch((err) => console.error(err))
     },[])
 
     const feedPostsRenderer = () => {
-        if(feedPosts){
+        if(feedPosts && feedPosts.length){
             return(
-                feedPosts.map(post => <span key={post.id}>{post.body}</span>)
+                feedPosts.map(post => <span data-testid="feed-post" key={post.id}>{post.body}</span>)
             )
         }else{
             return <span>Getting posts</span>
@@ -38,3 +38,4 @@ export default function About(props: Props) : React.Node {
         </div>
     )
 }
+ export default About
