@@ -18,10 +18,14 @@ describe('describes the About component', () =>{
         expect(component).toMatchSnapshot();
     })
 
-    it('should render the Community Feed', () => {
+    it('should render the Community Feed header', () => {
         const { container } = render(<About />);
         const feedHeader = getByTestId(container, 'feed-header')
         expect(feedHeader).toBeInTheDocument();
     })
+})
+
+describe('the getPosts function', () =>{
+
 
 })
